@@ -12,9 +12,9 @@ const Home = () => {
       <Image source={Logo} style={styles.img} />
       <Text style={styles.title}>The Number 1</Text>
       <Text style={{ marginTop: 10, marginBottom: 30 }}>Reading List App</Text>
-      {/* <View style={styles.card}>
+      <View style={styles.card}>
         <Text onPress={handlePress}>Hello, this is a card</Text>
-      </View>*/}
+      </View>
       <Link href="/about">About Page</Link>
       <Link href="/contact">Contact Page</Link>
     </View>
