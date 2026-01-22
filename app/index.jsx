@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <Image source={Logo} style={styles.img} />
-      <Text style={styles.title}>The Number 1234</Text>
+      <Text style={styles.title}>The Number 12345</Text>
       <Text style={{ marginTop: 10, marginBottom: 30 }}>Reading List App</Text>
       <View style={styles.card}>
         <Text onPress={handlePress}>Hello, this is a card</Text>
