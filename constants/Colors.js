@@ -11,7 +11,6 @@ export const Colors = {
     iconColorFocused: "#fff",
     uiBackground: "#2f2b3d",
   },
-
   light: {
     text: "#625f72",
     title: "#201e2b",
