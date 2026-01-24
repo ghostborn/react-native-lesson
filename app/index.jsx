@@ -1,4 +1,4 @@
-import { StyleSheet, Alert } from "react-native";
+import { StyleSheet } from "react-native";
 import { Link } from "expo-router";
 
 import ThemedView from "../components/ThemedView";
@@ -7,9 +7,6 @@ import ThemedLogo from "../components/ThemedLogo";
 import Spacer from "../components/Spacer";
 
 const Home = () => {
-  const handlePress = () => {
-    Alert.alert("mfk!");
-  };
   return (
     <ThemedView style={styles.container}>
       <ThemedLogo />
@@ -20,24 +17,14 @@ const Home = () => {
       <ThemedText style={{ marginTop: 10, marginBottom: 30 }}>
         Reading List App
       </ThemedText>
-      <Link href="/about" style={styles.link}>
-        <ThemedText>About Page</ThemedText>
+
+      <Link href="/login" style={styles.link}>
+        <ThemedText>Login</ThemedText>
       </Link>
-      <Link href="/contact" style={styles.link}>
-        <ThemedText>Contact Page</ThemedText>
+      <Link href="/register" style={styles.link}>
+        <ThemedText>Register</ThemedText>
       </Link>
     </ThemedView>
-
-    // <View style={styles.container}>
-    //   <Image source={Logo} style={styles.img} />
-    //   <Text style={styles.title}>The Number 12345</Text>
-    //   <Text style={{ marginTop: 10, marginBottom: 30 }}>Reading List App</Text>
-    //   <View style={styles.card}>
-    //     <Text onPress={handlePress}>Hello, this is a card</Text>
-    //   </View>
-    //   <Link href="/about">About Page</Link>
-    //   <Link href="/contact">Contact Page</Link>
-    // </View>
   );
 };
 export default Home;
