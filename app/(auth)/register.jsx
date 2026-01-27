@@ -31,7 +31,7 @@ const Register = () => {
       console.log("current user is: ", user);
       console.log(response, "response!!!");
     } catch (error) {
-      setError(error?.message);
+      setError(error.message);
     }
   };
 

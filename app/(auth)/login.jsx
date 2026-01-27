@@ -14,6 +14,7 @@ import ThemedText from "../../components/ThemedText";
 import Spacer from "../../components/Spacer";
 import ThemedButton from "../../components/ThemedButton";
 import ThemedTextInput from "../../components/ThemedTextInput";
+import { Colors } from "../../constants/Colors";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -28,8 +29,8 @@ const Login = () => {
       console.log("login form submitted: ", email, password);
       await login(email, password);
     } catch (error) {
-      console.error(error);
-      setError(error?.message);
+      // console.error(error);
+      setError(error.message);
     }
   };
 
