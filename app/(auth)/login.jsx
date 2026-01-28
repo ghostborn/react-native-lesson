@@ -8,6 +8,7 @@ import {
 import { Link } from "expo-router";
 import { useState } from "react";
 import { useUser } from "../../hooks/useUser";
+import showTip from "../../utils/showTip";
 
 import ThemedView from "../../components/ThemedView";
 import ThemedText from "../../components/ThemedText";
@@ -28,9 +29,11 @@ const Login = () => {
     try {
       console.log("login form submitted: ", email, password);
       await login(email, password);
+      showTip("登录成功");
     } catch (error) {
       // console.error(error);
       setError(error.message);
+      showTip(error.message);
     }
   };
 
@@ -39,7 +42,7 @@ const Login = () => {
       <ThemedView style={styles.container}>
         <Spacer />
         <ThemedText title={true} style={styles.title}>
-          Login to Your Account {user}
+          Login to Your Account
         </ThemedText>
 
         {/* <TextInput placeholder="Email" /> */}

@@ -1,19 +1,31 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text } from "react-native";
+import { useUser } from "../../hooks/useUser";
 
 import Spacer from "../../components/Spacer";
 import ThemedText from "../../components/ThemedText";
 import ThemedView from "../../components/ThemedView";
+import ThemedButton from "../../components/ThemedButton";
 
 const Profile = () => {
+  const { logout, user } = useUser();
+  console.log(user?.email);
   return (
     <ThemedView style={styles.container} safe={true}>
       <ThemedText title={true} style={styles.heading}>
-        Your Email
+        Halo {user?.name}
+      </ThemedText>
+      <Spacer />
+      <ThemedText title={true} style={styles.heading}>
+        {user?.email}
       </ThemedText>
       <Spacer />
 
       <ThemedText>Time to start reading some books...</ThemedText>
       <Spacer />
+
+      <ThemedButton onPress={logout} style={styles.button}>
+        <Text style={{ color: "#f2f2f2" }}>Logout</Text>
+      </ThemedButton>
     </ThemedView>
   );
 };
