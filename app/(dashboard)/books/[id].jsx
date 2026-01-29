@@ -24,3 +24,5 @@ const styles = StyleSheet.create({
     alignItems: "stretch",
   },
 });
+
+export default BookDetails;
