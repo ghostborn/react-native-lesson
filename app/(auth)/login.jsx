@@ -3,7 +3,6 @@ import {
   Text,
   Keyboard,
   TouchableWithoutFeedback,
-  TextInput,
 } from "react-native";
 import { Link } from "expo-router";
 import { useState } from "react";
@@ -31,7 +30,6 @@ const Login = () => {
       await login(email, password);
       showTip("登录成功");
     } catch (error) {
-      // console.error(error);
       setError(error.message);
       showTip(error.message);
     }

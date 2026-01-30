@@ -1,5 +1,6 @@
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text, Image } from "react-native";
 import { useUser } from "../../hooks/useUser";
+import { Avatars } from "../../lib/appwrite";
 
 import Spacer from "../../components/Spacer";
 import ThemedText from "../../components/ThemedText";
@@ -8,15 +9,15 @@ import ThemedButton from "../../components/ThemedButton";
 
 const Profile = () => {
   const { logout, user } = useUser();
-  console.log(user?.email);
   return (
     <ThemedView style={styles.container} safe={true}>
       <ThemedText title={true} style={styles.heading}>
-        Halo {user?.name}
+        Halo {user.name}
       </ThemedText>
+      {/* <Image source={Avatars} />*/}
       <Spacer />
       <ThemedText title={true} style={styles.heading}>
-        {user?.email}
+        {user.email}
       </ThemedText>
       <Spacer />
 
